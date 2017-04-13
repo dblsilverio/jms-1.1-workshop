@@ -11,7 +11,7 @@ import org.jboss.logging.Logger;
 import net.diogosilverio.jms.model.Metrics;
 
 /**
- * It warns critical alerts for everyone.
+ * It warns critical alerts to everyone.
  * 
  * @author diogo
  *
