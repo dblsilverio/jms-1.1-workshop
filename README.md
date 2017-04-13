@@ -6,6 +6,8 @@ A few samples describing main topics of JMS 1.1(jsr 914):
 * DLQs and ExpiryQueues
 * _Sync_ Message
 
+[Slides pt-BR](https://docs.google.com/presentation/d/1xnRC5N1mYP-237TUxb0tDPjjVg9Qi905CL57V-ken-E/edit#slide=id.g1d639e6386_1_361)
+
 ## Environment
 
 * Java 8
@@ -14,13 +16,13 @@ A few samples describing main topics of JMS 1.1(jsr 914):
 
 ## Configuration
 
-JBoss standalone-full profile.
+JBoss **standalone-full** profile.
 
 ### Security
 
 For the sake of simplicity, security is off:
 
-```
+```xml
 <hornetq-server>
 <!-- etc -->
     <security-enabled>false</security-enabled>
@@ -30,7 +32,7 @@ For the sake of simplicity, security is off:
 
 ### Destinations
 
-```
+```xml
 <hornetq-server>
 <!-- etc -->
 <address-settings>
