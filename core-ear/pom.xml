@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>net.diogosilverio.jms</groupId>
+		<artifactId>jms-1.1-workshop</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>jms-1.1-workshop-ear</artifactId>
+	<packaging>ear</packaging>
+	<name>Core EAR Module</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.diogosilverio.jms</groupId>
+			<artifactId>core-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>net.diogosilverio.jms</groupId>
+			<artifactId>core-messaging</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.10.1</version>
+				<configuration>
+					<modules>
+						<jarModule>
+							<groupId>net.diogosilverio.jms</groupId>
+							<artifactId>core-commons</artifactId>
+							<includeInApplicationXml>true</includeInApplicationXml>
+						</jarModule>
+						<ejbModule>
+							<groupId>net.diogosilverio.jms</groupId>
+							<artifactId>core-messaging</artifactId>
+						</ejbModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

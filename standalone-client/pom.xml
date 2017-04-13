@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>net.diogosilverio.jms</groupId>
+		<artifactId>jms-1.1-workshop</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>standalone-client</artifactId>
+	<name>Standalone JMS Client</name>
+	<dependencies>
+		<dependency>
+			<groupId>net.diogosilverio.jms</groupId>
+			<artifactId>core-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.spec.javax.jms</groupId>
+			<artifactId>jboss-jms-api_1.1_spec</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.as</groupId>
+			<artifactId>jboss-as-ejb-client-bom</artifactId>
+			<type>pom</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jboss.as</groupId>
+			<artifactId>jboss-as-jms-client-bom</artifactId>
+			<type>pom</type>
+		</dependency>
+
+	</dependencies>
+</project>
